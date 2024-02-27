@@ -1,0 +1,22 @@
+describe('Check product successfully added to Cart', () => {
+    it('Check the cart', () => {
+
+      cy.visit(' https://magento.softwaretestingboard.com/') // Launching the Website
+
+      cy.get('.product-items > :nth-child(1)').click() //Clicking on the product
+
+      cy.get('#option-label-size-143-item-167').click() //selecting size
+
+      cy.get('#option-label-color-93-item-56').click() // selecting color
+
+      cy.get('#product-addtocart-button').click() // Clicking on add to cart
+
+      cy.get('.message-success').should('have.text',"\n\nYou added Radiant Tee to your shopping cart.\n") // verifying the text
+
+      cy.get('.message-success > div > a').click() // Entering the shopping cart
+      
+      cy.get('.base').should('have.text','Shopping Cart')  //Verifying the text on the cart
+ 
+
+    })
+  })
