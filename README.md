@@ -11,8 +11,9 @@
 
 Here're some of the project's best features:
 
-*   Made in POM framework
 *   Script for Login page
+*   Add product to Cart
+*   Navigate the Website
 
 <h2>🛠️ Installation Steps:</h2>
 
